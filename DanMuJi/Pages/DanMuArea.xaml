@@ -1,0 +1,48 @@
+﻿<Window x:Class="DanMuJi.Pages.DanMuArea"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DanMuJi.Pages"
+             mc:Ignorable="d" 
+             xmlns:models="clr-namespace:DanMuJi.Models"
+             Name="myWin" WindowStyle="None" Opacity="1" AllowsTransparency="True"  Background="Transparent">
+    <Window.Resources>
+        <models:ArithmeticConverter x:Key="converter"/>
+        <!--<DataTemplate x:Key="TextBlockTemplate">
+            <TextBlock Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="#FF616161" ShadowDepth="1.5" Opacity="1"/>
+                </TextBlock.Effect>
+            </TextBlock>
+        </DataTemplate>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource }"-->
+        <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#FF616161" ShadowDepth="1.5" Opacity="1"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <!--<Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="rect"
+                                         Storyboard.TargetProperty="(Canvas.Left)"
+                                         To="{Binding ElementName=rect,Path=ActualWidth,Converter={StaticResource converter},ConverterParameter=*-0.5}"
+                                         Duration="0:0:10"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>-->
+    <Border>
+        <Canvas Name="myCanvas">
+           
+        </Canvas>
+    </Border>
+</Window>
